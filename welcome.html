@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>ようこそ</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="welcome-page">
+
+    <h1 id="message"></h1>
+    <div class="question-container">
+
+  <p class="subtitle">あなたについてお聞かせください</p>
+
+  <div class="question dog-cat-question">
+    <img src="images/dog.jpeg" class="dog-run">
+    <p>犬派？猫派？</p>
+    <div>
+      <button>犬</button>
+      <button>猫</button>
+    </div>
+    <img src="images/cat.png" class="cat-run">
+  </div>
+
+  <div class="question">
+    <p>血液型は？</p>
+    <div>
+      <button>A</button>
+      <button>B</button>
+      <button>O</button>
+      <button>AB</button>
+    </div>
+  </div>
+
+  <div class="question">
+    <p>MBTIは？</p>
+    <div class="mbti-grid">
+      <button class="mbti-option analyst"><span>INTJ</span></button>
+      <button class="mbti-option analyst"><span>INTP</span></button>
+      <button class="mbti-option analyst"><span>ENTJ</span></button>
+      <button class="mbti-option analyst"><span>ENTP</span></button>
+
+      <button class="mbti-option diplomat"><span>INFJ</span></button>
+      <button class="mbti-option diplomat"><span>INFP</span></button>
+      <button class="mbti-option diplomat"><span>ENFJ</span></button>
+      <button class="mbti-option diplomat"><span>ENFP</span></button>
+
+      <button class="mbti-option sentinel"><span>ISTJ</span></button>
+      <button class="mbti-option sentinel"><span>ISFJ</span></button>
+      <button class="mbti-option sentinel"><span>ESTJ</span></button>
+      <button class="mbti-option sentinel"><span>ESFJ</span></button>
+
+      <button class="mbti-option explorer"><span>ISTP</span></button>
+      <button class="mbti-option explorer"><span>ISFP</span></button>
+      <button class="mbti-option explorer"><span>ESTP</span></button>
+      <button class="mbti-option explorer"><span>ESFP</span></button>
+
+      <button class="mbti-option"><span>不明</span></button>
+    </div>
+  </div>
+
+</div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const user = params.get("user");
+
+      document.getElementById("message").textContent =
+        "ようこそ、" + user + "さん";
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,176 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body.login-page {
+  background-color: #222222;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.welcome-page {
+  background-color: #ffffff
+}
+
+/* ログイン画面 */
+.login-container {
+  background-color: #ffffff;
+  width: fit-content;
+  min-width: 500px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+}
+
+/* 一覧 */
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  background: white;
+  margin: 10px auto;
+  padding: 10px;
+  width: 200px;
+}
+
+.user-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.user {
+  text-align: center;
+  cursor: pointer;
+}
+
+.user img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.user p {
+  margin-top: 10px;
+}
+
+/* ホバーでちょっと浮く */
+.user:hover {
+  transform: scale(1.1);
+}
+
+/* Ensure login-container h1 does not wrap */
+.login-container h1 {
+  white-space: nowrap;
+}
+
+/* welcome画面中央寄せ＋アニメーション */
+#message {
+  text-align: center;
+  margin-top: 200px;
+  font-size: 32px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.question-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.question {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question p {
+  margin-bottom: 10px;
+}
+
+.question div {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.question button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background: #e0f0ff;
+  color: #333;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.question button:hover {
+  background: #cce6ff;
+}
+
+.question input {
+  padding: 10px;
+  width: 200px;
+}
+
+.mbti-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.mbti-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 12px;
+  width: 80px;
+  color: white;
+  font-weight: bold;
+}
+
+.mbti-option span {
+  font-size: 12px;
+}
+
+/* MBTIカラー（16personalities風） */
+.mbti-option.analyst { background: #7f5af0; }
+.mbti-option.diplomat { background: #2cb67d; }
+.mbti-option.sentinel { background: #3da9fc; }
+.mbti-option.explorer { background: #faae2b; }

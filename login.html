@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>ログイン</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="login-page">
+
+    <div class="login-container">
+      <h1>どなたでログインしますか？</h1>
+
+      <div class="user-list">
+        
+        <div class="user" onclick="login('永井')">
+          <img src="images/nagai.png">
+          <p>永井 弘之</p>
+        </div>
+
+        <div class="user" onclick="login('古越')">
+          <img src="images/furukoshi.png">
+          <p>古越 聖花</p>
+        </div>
+
+        <div class="user" onclick="login('余')">
+          <img src="images/yu.png">
+          <p>余 采蓉</p>
+        </div>
+
+        <div class="user" onclick="login('初崎')">
+          <img src="images/hatsuzaki.jpg">
+          <p>初﨑 誠義</p>
+        </div>
+
+        <div class="user" onclick="login('陳')">
+          <img src="images/chen.jpg">
+          <p>陳 君儒</p>
+        </div>
+
+        <div class="user" onclick="login('冨田')">
+          <img src="images/tomita.png">
+          <p>冨田 尊穂</p>
+        </div>
+
+      </div>
+    </div>
+
+<script>
+function login(name) {
+  window.location.href = "welcome.html?user=" + encodeURIComponent(name);
+}
+</script>
+  </body>
+</html>
